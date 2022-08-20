@@ -43,7 +43,7 @@ function Login() {
   //   );
   // }
   return (
-    <div className="middle-con">
+    <div className="middle-login-con">
       <div className="login-container">
         <form className="form-for-login" onSubmit={(e) => e.preventDefault()}>
           <div className="name-cont">
