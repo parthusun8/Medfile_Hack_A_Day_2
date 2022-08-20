@@ -19,9 +19,10 @@ const Main = () => {
       <center><div className="mt-5 contact-container" style={{ width: "60%", border: "1px solid black", borderRadius: "30px"}}>
         <form className="form-for-signup m-3" onSubmit={(e) => e.preventDefault()}>
           {/* Upload photo */}
-          <div className="Photo upload">
-            <span>Upload your photo below</span>
+          <h1>Contact Form</h1>
+          <div className="Photo-upload">
             
+            <div className="rounded-photo">Upload photo<input type="file" id="myFile" name="filename"/></div>
           </div>
           {/* Name  */}
           <div className="name-cont">
