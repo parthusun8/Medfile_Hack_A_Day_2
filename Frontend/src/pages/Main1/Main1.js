@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Main1.css";
-const Main = () => {
+const Main1 = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
   const [gender, setGender] = useState("");
@@ -14,50 +14,48 @@ const Main = () => {
   const [operation, setOperation] = useState("");
   const [submit, setSubmit] = useState(false);
   const [upload, setUpload] = useState("");
-  const [imgData,setImgData] =useState(null);
-  const onChangePicture = (e) => {
-    setUpload(e.target.files[0]);
-    console.log('picture: ', upload);   
-    const reader = new FileReader();
-      reader.addEventListener("load", () => {
-        setImgData(reader.result);
-      });
-      reader.readAsDataURL(e.target.files[0]);
-  };
+
+  function uploadpic() {
+    document.getElementById("myFile").click();
+    // alert(document.getElementById("myFile").value);
+  }
   return (
-    <div className="middleCon">
-      <center><div className="mt-5 contact-container" style={{ width: "60%", border: "1px solid black", borderRadius: "30px"}}>
+    <div className="middleCon main1">
+      <div style={{ height: "100px"}}></div>
+      <center><div className="pt-5 contact-container updateForm" style={{ width: "60%", border: "1px solid black", borderRadius: "30px"}}>
         <form className="form-for-signup m-3" onSubmit={(e) => e.preventDefault()}>
           {/* Upload photo */}
           <h1>Update Details</h1>
           <div className="Photo-upload">
-            <div className="rounded-photo" >Upload photo<input type="file" style={{display:"none"}} id="myFile" onChange={onChangePicture} accept="image/jpg image/jpeg image/png"/></div>
+            <div className="rounded-photo" onClick={ uploadpic }>Upload your picture{upload}<input style={{ display: "none" }} type="file" accept="image/png, image/jpeg" id="myFile" name="filename"/></div>
           </div>
           {/* Name  */}
-          <div className="name-cont">
-            <span>Full name </span>
+          <div className="name-cont mt-3">
+            <span> Name </span>
             <input
               type="text"
               name="name"
               id="name-input"
+              placeholder="Enter your full name"
               onChange={(e) => setName(e.target.value)}
             />
             {/* <h1>{name}</h1> */}
           </div>
           {/* Age */}
-          <div className="age-cont">
-            <span>Age (in years)</span>
+          <div className="age-cont mt-1">
+            <span> Age </span>
             <input
               type="number"
               name="age"
               id="number-input"
+              placeholder="Enter your age (in years)"
               onChange={(e) => setAge(e.target.value)}
             />
             {/* <h1>{age}</h1> */}
           </div>
           {/* Gender */}
-          <div className="gender-cont">
-            <span>Gender</span>
+          <div className="gender-cont mt-1">
+            <span> Gender </span>
             <select type="text" onChange={(e) => setGender(e.target.value)}>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -66,12 +64,13 @@ const Main = () => {
             {/* <h1>{gender}</h1> */}
           </div>
           {/* Height */}
-          <div className="height-cont">
-            <span>Height (in Centimeters)</span>
+          <div className="height-cont mt-1">
+            <span> Height </span>
             <input
               type="number"
               name="Height"
               id="Height-input"
+              placeholder="Enter your height (in Centimeters)"
               onChange={(e) => {
                 setHeight(e.target.value);
               }}
@@ -79,12 +78,13 @@ const Main = () => {
             {/* <h1>{height}</h1> */}
           </div>
           {/* Weight */}
-          <div className="weight-cont">
-            <span>Weight (in Kilograms)</span>
+          <div className="weight-cont mt-1">
+            <span> Weight </span>
             <input
               type="number"
               name="Weight"
               id="Weight-input"
+              placeholder="Enter your weight (in Kilograms)"
               onChange={(e) => {
                 setWeight(e.target.value);
               }}
@@ -92,12 +92,13 @@ const Main = () => {
             {/* <h1>{weight}</h1> */}
           </div>
           {/*Address*/}
-          <div className="Address">
-            <span>Full Address</span>
+          <div className="Address mt-1">
+            <span> Address </span>
             <input
               type="text"
               name="Address"
               id="Address-input"
+              placeholder="Enter your full address with postal code"
               onChange={(e) => {
                 setAddress(e.target.value);
               }}
@@ -105,12 +106,13 @@ const Main = () => {
             {/* <h1>{address}</h1> */}
           </div>
           {/*Major disabilities*/}
-          <div className="Disability">
-            <span>Disabilities (if, any)</span>
+          <div className="Disability mt-1">
+            <span> Disabilities </span>
             <input
               type="text"
               name="disability"
               id="Disability-input"
+              placeholder="Enter your disabilities (if, any)"
               onChange={(e) => {
                 setDisability(e.target.value);
               }}
@@ -118,34 +120,37 @@ const Main = () => {
             {/* <h1>{disability}</h1> */}
           </div>
           {/*Allergies */}
-          <div className="Allergies">
-            <span>Allergies (if, any)</span>
+          <div className="Allergies mt-1">
+            <span> Allergies </span>
             <input
               type="text"
               name="allergies"
               id="Allergies-input"
+              placeholder="Enter your allergies (if, any)"
               onChange={(e) => setAllergies(e.target.value)}
             />
             {/* <h1>{allergies}</h1> */}
           </div>
           {/* Ongoing medications */}
-          <div className="Medications">
-            <span>Medications</span>
+          <div className="Medications mt-1">
+            <span> Medications </span>
             <input
               type="text"
               name="Medications"
               id="Medications-input"
+              placeholder="Enter your ongoing medications (if, any)"
               onChange={(e) => setMedi(e.target.value)}
             />
             {/* <h1>{medi}</h1> */}
           </div>
           {/* Operations */}
-          <div className="Operations">
-            <span>Previous Operations Done (if, any)</span>
+          <div className="Operations mt-1">
+            <span> Previous Operations Done </span>
             <input
               type="text"
               name="Operations"
               id="Operations-input"
+              placeholder="Enter the previous operations Done (if, any)"
               onChange={(e) => setOperation(e.target.value)}
             />
             {/* <h1>{operation}</h1> */}
@@ -160,8 +165,9 @@ const Main = () => {
           <button className="mt-5 pt-3 pb-3 px-5 py-5">Submit</button>
         </form>
       </div></center>
+      <div style={{ height: "100px"}}></div>
     </div>
   );
 };
 
-export default Main;
+export default Main1;
