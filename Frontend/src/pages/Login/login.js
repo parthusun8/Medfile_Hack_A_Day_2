@@ -44,33 +44,37 @@ function Login() {
   // }
   return (
     <div className="middle-login-con">
-      <div className="login-container">
+      <center>
+        <div className="login-container" style={{  border: "1px solid black", borderRadius: "30px"}}>
+        <h2 className="mt-3">Welcome Back!</h2>
         <form className="form-for-login" onSubmit={(e) => e.preventDefault()}>
-          <div className="name-cont">
+          <div className="name-cont mt-3">
             <span>Email Id</span>
             <input
               onChange={(e) => updateEmail(e.target.value)}
               type="text"
               name="name"
               id="name-input"
+              placeholder="Enter your email"
             />
           </div>
-          <div className="pass-cont">
+          <div className="pass-cont mt-3">
             <span>Password</span>
             <input
               onChange={(e) => updatePassword(e.target.value)}
               type={show?"text":"password"}
               name="pass"
               id="pass-input"
+              placeholder="Enter your password"
             />
             <i onClick={TogglePasswordVisibility}><AiFillEye/> Show password</i>
           </div>
           {/* <button onClick={send} className="sign-in-btn"> */}
-          <center><button className="mt-4 sign-in-btn">
+          <button className="mt-4 mb-3 sign-in-btn">
             Login
-          </button></center>
+          </button>
         </form>
-      </div>
+      </div></center>
     </div>
   );
 }
