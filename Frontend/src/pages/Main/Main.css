@@ -1,0 +1,7 @@
+.middler{
+    display:flex;
+    
+     /* max-height: 50vh; */
+    min-height: 100vh;
+     /* background-color: #90caf9;  */
+}
