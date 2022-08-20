@@ -44,12 +44,13 @@ function Login() {
   // }
   return (
     <div className="middle-login-con">
-      <center>
+      
         <div className="login-container" style={{  border: "1px solid black", borderRadius: "30px"}}>
-        <h2 className="mt-3">Welcome Back!</h2>
+        <div className="mt-5"/>
+        <h2 className="mt-3 mx-3">Welcome Back!</h2>
         <form className="form-for-login" onSubmit={(e) => e.preventDefault()}>
           <div className="name-cont mt-3">
-            <span>Email Id</span>
+            <span className="mx-3">Email Id</span>
             <input
               onChange={(e) => updateEmail(e.target.value)}
               type="text"
@@ -57,24 +58,29 @@ function Login() {
               id="name-input"
               placeholder="Enter your email"
             />
+            
           </div>
           <div className="pass-cont mt-3">
-            <span>Password</span>
+            <span className="mx-3">Password</span>
             <input
               onChange={(e) => updatePassword(e.target.value)}
               type={show?"text":"password"}
               name="pass"
               id="pass-input"
               placeholder="Enter your password"
+              className="mx-3"
             />
-            <i onClick={TogglePasswordVisibility}><AiFillEye/> Show password</i>
+            <i onClick={TogglePasswordVisibility} className="mx-3"><AiFillEye/> Show password</i>
           </div>
           {/* <button onClick={send} className="sign-in-btn"> */}
+          <div className="mx-3 commentout mt-3"><i>New to MediFile? <a href="./signup">Create an account</a></i></div>
+          <center>
           <button className="mt-4 mb-3 sign-in-btn">
             Login
           </button>
+          </center>
         </form>
-      </div></center>
+      </div>
     </div>
   );
 }

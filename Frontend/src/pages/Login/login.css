@@ -7,3 +7,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.commentout{
+    color:#41424c;
+    cursor:pointer;
+}

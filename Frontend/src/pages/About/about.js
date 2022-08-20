@@ -9,15 +9,17 @@ function About() {
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a
             href="index.html"
-            className="logo d-flex align-items-center scrollto me-auto me-lg-0"
+            className="logo d-flex  flex-grow"
           >
             <h1>
               MedFile<span>.</span>
             </h1>
           </a>
-          <a className="btn-getstarted scrollto" href="/login">
-            Login / Sign Up
+          <a className="justify-content-end" >
+            <button ><a href="/login" className="Navbarbtn" >Login</a></button>
+            <button><a href="/signup" className="Navbarbtn">Signup</a></button>
           </a>
+          
         </div>
       </header>
       {/* End Header */}

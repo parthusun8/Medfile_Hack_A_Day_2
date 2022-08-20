@@ -108,10 +108,8 @@ function Signup() {
                 onChange={(e)=>setConfirmPassword(e.target.value)}/>
             <i onClick={TogglePasswordVisibility}><AiFillEye/> Show password</i>
           </div> */}
-          <div className="mt-5">
-
-          </div>
-          <button onClick={send} className="sign-btn ">
+          
+          <button onClick={send} className="sign-btn mt-5">
             SignUp
           </button>
         </form>

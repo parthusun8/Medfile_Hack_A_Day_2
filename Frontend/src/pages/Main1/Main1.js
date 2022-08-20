@@ -9,8 +9,7 @@ const Main1 = () => {
   const [address, setAddress] = useState("");
   const [disability, setDisability] = useState("");
   const [allergies, setAllergies] = useState("");
-  const [medi, setMedi] = useState("");
-  const [prev, setPrev] = useState("");
+  const [medications, setMedications] = useState("");
   const [operation, setOperation] = useState("");
   const [submit, setSubmit] = useState(false);
   const [upload, setUpload] = useState("");
@@ -19,6 +18,28 @@ const Main1 = () => {
     document.getElementById("myFile").click();
     // alert(document.getElementById("myFile").value);
   }
+
+    function send() {
+      const requestOptions ={
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
+          fullName:name,
+          currentAge:age,
+          Sex:gender,
+          Height:height,
+          Weight:weight,
+          Address:address,
+          Disability:disability,
+          Allergies:allergies,
+          Medications:medications,
+          Operations:operation,
+          Submit:submit,
+          Picture:upload
+        })
+      }
+      console.log(requestOptions.body);
+    }
   return (
     <div className="middleCon main1">
       <div style={{ height: "100px"}}></div>
@@ -139,7 +160,7 @@ const Main1 = () => {
               name="Medications"
               id="Medications-input"
               placeholder="Enter your ongoing medications (if, any)"
-              onChange={(e) => setMedi(e.target.value)}
+              onChange={(e) => setMedications(e.target.value)}
             />
             {/* <h1>{medi}</h1> */}
           </div>
@@ -162,7 +183,7 @@ const Main1 = () => {
           <div className="d-flex acceptTerms">
             <label for="accept" className="mt-3"><input required type="checkbox" className="mt-1" id="accept" name="accept" value="Accept-Terms" /> I agree to the terms and conditions and also to the privacy policy of MedFile.</label>
           </div>
-          <button className="mt-5 pt-3 pb-3 px-5 py-5">Submit</button>
+          <button className="mt-5 pt-3 pb-3 px-5 py-5" onClick={send}>Submit</button>
         </form>
       </div></center>
       <div style={{ height: "100px"}}></div>
