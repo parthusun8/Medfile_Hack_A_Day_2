@@ -22,14 +22,14 @@
   justify-content: center;
 }
 
-.name-cont {
+.name-cont, .age-cont, .height-cont, .gender-cont, .weight-cont, .Address, .Disability, .Allergies, .Medications, .Operations {
   display: flex;
   flex-direction: column;
   /* align-items: flex-start;
   justify-content: center; */
 }
 
-.name-cont > input {
+.name-cont > input, .age-cont > input, .height-cont > input, .weight-cont > input, .Address > input, .Disability > input, .Allergies > input, .Medications > input, .Operations > input {
   /* border-radius: 20px; */
   border: none;
   background-color: #eeeeee;
