@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        @apply bg-blue-400
+    }
+}
+
+@layer components{
+    .srihari{
+        @apply text-white items-center; 
+    }
+}
