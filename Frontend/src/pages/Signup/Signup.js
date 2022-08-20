@@ -57,7 +57,8 @@ function Signup() {
       <div className="signup-container mt-4 mb-5">
         <form className="form-for-signup" onSubmit={(e) => e.preventDefault()}>
           <div className="name-cont mt-5">
-            <span>Full Name</span>
+            <div className="CreateAccount mx-3"><span className="welcome">Welcome</span><br /> to <span style={{ color: "red" }}>Med</span>File</div>
+            <span className="mx-3 mt-5">Full Name</span>
             <input
               type="text"
               name="name"
@@ -77,7 +78,7 @@ function Signup() {
               />
             </div> */}
             <div className="org">
-            <span>Email</span>
+            <span className="mx-3">Email</span>
             <input
               type="text"
               name="org-name"
@@ -87,7 +88,7 @@ function Signup() {
             />
           </div>
           <div className="pass-cont">
-            <span>Password</span>
+            <span className="mx-3">Password</span>
             <input
               type={show?"text":"password"}
               name="pass"
@@ -95,7 +96,7 @@ function Signup() {
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <i onClick={TogglePasswordVisibility} className="show--password"><AiFillEye/> <span className="show--password">Show password</span></i>
+            <i onClick={TogglePasswordVisibility} className="show--password mx-3"><AiFillEye/> <span className="show--password">Show password</span></i>
           </div>
           {/* <div className="pass-cont">
             <span>Confirm Password</span>
@@ -107,8 +108,10 @@ function Signup() {
                 onChange={(e)=>setConfirmPassword(e.target.value)}/>
             <i onClick={TogglePasswordVisibility}><AiFillEye/> Show password</i>
           </div> */}
-          
-          <button onClick={send} className="sign-btn">
+          <div className="mt-5">
+
+          </div>
+          <button onClick={send} className="sign-btn ">
             SignUp
           </button>
         </form>
