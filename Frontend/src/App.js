@@ -1,9 +1,11 @@
 import Login from "./pages/Login";
+// import About from "./pages/About/about";
 
 function App() {
   return (
     <div>
-      <Login/>
+      {/* <About /> */}
+      <Login />
     </div>
   );
 }
