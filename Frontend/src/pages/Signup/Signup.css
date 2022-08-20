@@ -1,0 +1,124 @@
+.signup-container {
+  overflow-y: scroll;
+  height: 600px;
+  width: 800px;
+}
+.signup-container::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar */
+}
+
+.middle-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form-for-signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-cont {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start;
+  justify-content: center; */
+}
+
+.name-cont > input {
+  /* border-radius: 20px; */
+  border: none;
+  background-color: #eeeeee;
+  /* border-bottom: 1px solid blue; */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  color: black;
+  font-family: inherit;
+  outline: none;
+  width: 400px;
+}
+
+.pass-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-cont > input {
+  /* border-radius: 20px; */
+  border: none;
+  background-color: #eeeeee;
+  /* border-bottom: 1px solid blue; */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  color: black;
+  font-family: inherit;
+  outline: none;
+  width: 400px;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
+.email > input {
+  /* border-radius: 20px; */
+  border: none;
+  background-color: #eeeeee;
+  /* border-bottom: 1px solid blue; */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  color: black;
+  font-family: inherit;
+  outline: none;
+  width: 400px;
+}
+.org {
+  display: flex;
+  flex-direction: column;
+}
+
+.org > input {
+  /* border-radius: 20px; */
+  border: none;
+  background-color: #eeeeee;
+  /* border-bottom: 1px solid blue; */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  color: black;
+  font-family: inherit;
+  outline: none;
+  width: 400px;
+}
+
+.sign-btn {
+  border-radius: 12px;
+  padding: 10px;
+  width: 100px;
+}
+
+.name-cont > input:hover {
+  border-bottom: 1.5px solid #0ea2bd;
+}
+
+.pass-cont > input:hover {
+  border-bottom: 1.5px solid #0ea2bd;
+}
+
+.phone > input:hover {
+  border-bottom: 1.5px solid #0ea2bd;
+}
+
+.org > input:hover {
+  border-bottom: 1.5px solid #0ea2bd;
+}
+.show--password{
+  cursor: pointer;
+}

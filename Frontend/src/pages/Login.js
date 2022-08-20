@@ -16,7 +16,7 @@ const Login = () => {
     
       return (
         <form onSubmit={handleSubmit(onSubmit)} className="max-w-lg ml-4 mt-5">
-          <label className='leading-loose text-left block text-blue-600 mb-8px '>First Name</label>
+          {/*  */}
           <input    
 
             {...register("firstName", {
@@ -46,9 +46,6 @@ const Login = () => {
           <button type="submit" className='mt-2 border-4 rounded border-rose-500 bg-black text-teal-200'>Submit</button>
         </form>
       );
-   
-  
-  
 }
 
 export default Login
