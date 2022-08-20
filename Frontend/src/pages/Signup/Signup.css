@@ -1,14 +1,21 @@
+.middle-signup-con{
+  background-image: url("./background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .signup-container {
+  background-color: aliceblue;
   overflow-y: scroll;
-  height: 600px;
-  width: 800px;
+  height:80vh;
+  width: 60vh;
 }
 .signup-container::-webkit-scrollbar {
   display: none;
   /* Hide scrollbar */
 }
 
-.middle-con {
+.middle-signup-con, .middle-login-con {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -53,10 +53,10 @@ function Signup() {
     setShow(show?false:true);
   };
   return (
-    <div className="middle-con">
-      <div className="signup-contianer">
+    <div className="middle-signup-con">
+      <div className="signup-container mt-4 mb-5">
         <form className="form-for-signup" onSubmit={(e) => e.preventDefault()}>
-          <div className="name-cont">
+          <div className="name-cont mt-5">
             <span>Full Name</span>
             <input
               type="text"
