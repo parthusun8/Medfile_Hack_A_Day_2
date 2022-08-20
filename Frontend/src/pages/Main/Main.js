@@ -16,8 +16,8 @@ const Main = () => {
   const [upload, setUpload] = useState("");
   return (
     <div className="middleCon">
-      <div className="contact-container">
-        <form className="form-for-signup" onSubmit={(e) => e.preventDefault()}>
+      <center><div className="mt-5 contact-container" style={{ width: "60%", border: "1px solid black", borderRadius: "30px"}}>
+        <form className="form-for-signup m-3" onSubmit={(e) => e.preventDefault()}>
           {/* Upload photo */}
           <div className="Photo upload">
             <span>Upload your photo below</span>
@@ -154,7 +154,7 @@ const Main = () => {
           <input type="checkbox" id="confirm" name="confirm" value="Confirm-Submission" />
           <label for="confirm"> I hereby accept that all</label>
         </form>
-      </div>
+      </div></center>
     </div>
   );
 };
