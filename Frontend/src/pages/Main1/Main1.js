@@ -14,11 +14,16 @@ const Main = () => {
   const [operation, setOperation] = useState("");
   const [submit, setSubmit] = useState(false);
   const [upload, setUpload] = useState("");
-
-  function uploadpic() {
-    document.getElementById("myFile").click();
-    // alert(document.getElementById("myFile").value);
-  }
+  const [imgData,setImgData] =useState(null);
+  const onChangePicture = (e) => {
+    setUpload(e.target.files[0]);
+    console.log('picture: ', upload);   
+    const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        setImgData(reader.result);
+      });
+      reader.readAsDataURL(e.target.files[0]);
+  };
   return (
     <div className="middleCon">
       <center><div className="mt-5 contact-container" style={{ width: "60%", border: "1px solid black", borderRadius: "30px"}}>
@@ -26,7 +31,7 @@ const Main = () => {
           {/* Upload photo */}
           <h1>Update Details</h1>
           <div className="Photo-upload">
-            <div className="rounded-photo" onClick={ uploadpic }>Upload your picture{upload}<input style={{ display: "none" }} type="file" accept="image/png, image/jpeg" id="myFile" name="filename"/></div>
+            <div className="rounded-photo" >Upload photo<input type="file" style={{display:"none"}} id="myFile" onChange={onChangePicture} accept="image/jpg image/jpeg image/png"/></div>
           </div>
           {/* Name  */}
           <div className="name-cont">
