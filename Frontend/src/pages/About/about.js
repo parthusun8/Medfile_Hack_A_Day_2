@@ -12,7 +12,7 @@ function About() {
             className="logo d-flex  flex-grow"
           >
             <h1>
-              MedFile<span>.</span>
+              <span style={{color: "red"}}>Med</span>File
             </h1>
           </a>
           <a className="justify-content-end" >
@@ -46,13 +46,15 @@ function About() {
             style={{ width: "40%" }}
           />
           <h2>
-            Welcome to <span>MedFile</span>
+            Welcome to <span style={{color: "red"}}>Med</span>File
           </h2>
-          <h3>MedFile is an application which helps to fill you application form without going to hospital and convert that application form into QR which can be stored in our health records.</h3>
-          <h4>No longer wait for the healthcare provider to print, scan and fax your application to their office - just take the QR code with you.</h4> 
-
+          <h3><strong><span style={{color: "red"}}>Med</span>File</strong> is an application which reduces the user's work of filling 
+          an application form when visiting a new hospital. The basic details needed to fill an application form are collected and 
+          converted into a QR which can be scanned at the hospitals.</h3>
+          <h4>Patients <strong>need not wait</strong> any longer for the healthcare provider to print, scan and store your application 
+          in their database - just show the QR code and they will get your basic details directly and can save it to their database, 
+          if required.</h4> 
         </div>
-        
       </section>
       <main id="main">
         <section id="about" className="about">
@@ -64,11 +66,12 @@ function About() {
               <div className="col-lg-5">
                 <div className="another-illustration">
                   {/* Another illustration goes here... */}
+                  <img src="assets/img/doctor.png" style={{width: "500px"}} />
                 </div>
               </div>
               <div className="col-lg-7">
                 <h3 className="pt-0 pt-lg-5">
-                  The purpose of the project should be written here.
+                  The purpose of the project is to eliminate the waiting time of patients for new applications in a hospital.
                 </h3>
                 <ul className="nav nav-pills mb-3">
                   <li>
@@ -96,7 +99,15 @@ function About() {
                   {/* End of Tab 1 Content */}
                   <div className="tab-pane fade show" id="tab2">
                     <div className="d-flex align-items-center mt-4">
-                      <p>The benefits of using this app [for both users and hospitals] goes here...</p>
+                      <p>Both the hospitals as well as the patients are benefitted by this application.
+                        <ul>
+                          <li>For <strong>Patients</strong>, this application proves to be very helpful as they need not waste their time
+                           waiting in the hospital lobby for their application form to be processed during emergency. Using our application, 
+                           the patient's basic details are directly made available to the hospital through a QR code
+                            and thus, the form processing time is saved and the doctors can proceed with the operations.</li>
+                            <li>For <strong>Hospitals</strong> too, this application proves to be very helpful.</li>
+                        </ul>
+                      </p>
                       </div>
                   </div>
                   {/* End Tab 2 Content */}
