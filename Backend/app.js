@@ -2,7 +2,6 @@ const http = require("http");
 var express = require("express");
 var bodyParser = require("body-parser");
 const cors = require("cors");
-// const hostname = "127.0.0.1";
 const port = process.env.PORT || 5000;
 
 var app = express();
