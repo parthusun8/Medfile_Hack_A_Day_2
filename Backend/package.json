@@ -2,7 +2,7 @@
   "name": "hackathon-backend-19aug2022",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app"
@@ -15,5 +15,8 @@
     "express": "^4.18.1",
     "firebase": "^9.9.3",
     "path": "^0.12.7"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
