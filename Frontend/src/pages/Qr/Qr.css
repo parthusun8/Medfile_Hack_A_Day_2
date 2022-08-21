@@ -7,6 +7,10 @@
         width: 60vh;
 
 }
+.qr-container::-webkit-scrollbar{
+    display: none;
+}
+
 .middle-qr-con{
     background-size: cover;
     background-repeat: no-repeat;

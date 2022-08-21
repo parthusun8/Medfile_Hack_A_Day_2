@@ -101,10 +101,8 @@ function Qr() {
             <div className="mt-5"/>
             <center> <QRCode value={jsonData} /> </center>
             <div/>
-            <h2 className="mx-3 mt-5"><center>Don't share this code to </center><center>anyone</center></h2>
+            <h2 className="mx-3 mt-5"><center>Don't share this QR to </center><center>anyone</center></h2>
         </div>
-          
-        
     </div>
   );
 }
