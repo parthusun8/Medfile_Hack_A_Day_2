@@ -82,11 +82,15 @@ function Main1() {
   const [operation, setOperation] = useState("");
   const [submit, setSubmit] = useState(false);
   const [upload, setUpload] = useState("");
+  const [img, setImg] = useState();
 
-  function uploadpic() {
-    document.getElementById("myFile").click();
-    alert(document.getElementById("myFile").value);
-  }
+  const onImageChange = (e) => {
+    const [file] = e.target.files;
+    setImg(URL.createObjectURL(file));
+    document.getElementById("myFile").classList.add("active");
+    localStorage.setItem("img", URL.createObjectURL(file));
+  };
+
 
   function send() {
     const params = {
@@ -137,16 +141,20 @@ function Main1() {
               {/* Upload photo */}
               <h1>Update Details</h1>
               <div className="Photo-upload">
-                <div className="rounded-photo" onClick={uploadpic}>
-                  Upload your picture{upload}
-                  <input
-                    style={{ display: "none" }}
-                    type="file"
-                    accept="image/png, image/jpeg"
-                    id="myFile"
-                    name="filename"
-                  />
-                </div>
+                {img ? (
+                  <img src={img} alt="" className="img-photo" />
+                ) : (
+                  <>
+                    <>Upload your picture</>
+                    <input
+                      type="file"
+                      accept="image/png, image/jpeg"
+                      id="myFile"
+                      name="filename"
+                      onChange={onImageChange}
+                    />
+                  </>
+                )}
               </div>
               {/* Name  */}
               <div className="name-cont mt-3">

@@ -9,6 +9,14 @@ const baseURL = "https://mlh2022-medfile.herokuapp.com/";
 
 const Main = () => {
 
+  useEffect(() => {
+    const a = localStorage.getItem("img");
+    if (a) {
+      setImg(a);
+    } 
+  }, []);
+
+
   async function getAndSetUserDetails(userId){
     axios
       .post(baseURL + "users/getuser", {
@@ -84,8 +92,12 @@ const Main = () => {
   const [allergies, setAllergies] = useState("");
   const [medications, setMedications] = useState("");
   const [operation, setOperation] = useState("");
+  const [img, setImg] = useState();
 
   return (
+    
+
+
     <>
       <button className="Navbarbtn" onClick={emptyLocalStorage}>Logout</button>
       <div className="middleCon main1">
@@ -96,7 +108,8 @@ const Main = () => {
           
           <h1>Patient Details</h1>
           <div className="Photo-upload">
-            <div className="rounded-photo"></div>
+          {img ? <img src={img} className="img-photo"/> : <div className="rounded-photo"></div>}
+            
           </div>
 
           <center>
