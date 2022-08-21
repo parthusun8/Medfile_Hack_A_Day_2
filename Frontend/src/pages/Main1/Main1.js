@@ -77,7 +77,7 @@ const Main1 = () => {
           {/* Gender */}
           <div className="gender-cont mt-1">
             <span> Gender </span>
-            <select type="text" onChange={(e) => setGender(e.target.value)}>
+            <select className="p-2" style={{width: "400px", borderRadius: "10px"}} type="text" onChange={(e) => setGender(e.target.value)}>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Not Specified">Not Specified</option>
