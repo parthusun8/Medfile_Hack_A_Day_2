@@ -38,8 +38,3 @@ Contact us at: ps2644@srmist.edu.in sshsrn@gmail.com
 ![](readme-assets/3.jpeg)
 ![](readme-assets/4.jpeg)
 ![](readme-assets/5.jpeg)
-
-
-Contributors:
-
-![Contributors](https://contributors-img.web.app/image?repo=parthusun8/Medfile_Hack_A_Day_2)
