@@ -73,7 +73,7 @@ function Login() {
             <i onClick={TogglePasswordVisibility} className="mx-3"><AiFillEye/> Show password</i>
           </div>
           {/* <button onClick={send} className="sign-in-btn"> */}
-          <div className="mx-3 commentout mt-3"><i>New to MediFile? <a href="./signup">Create an account</a></i></div>
+          <div className="mx-3 commentout mt-3"><i>New to MedFile? <a href="./signup">Create an account</a></i></div>
           <center>
           <button className="mt-4 mb-3 sign-in-btn">
             Login
