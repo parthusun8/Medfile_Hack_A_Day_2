@@ -16,8 +16,17 @@ function About() {
             </h1>
           </a>
           <a className="justify-content-end" >
-            <button ><a href="/login" className="Navbarbtn" >Login</a></button>
-            <button><a href="/signup" className="Navbarbtn">Signup</a></button>
+            <Link to="/login">
+              <button className="Navbarbtn">
+                Login
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button className="Navbarbtn">
+                Signup
+              </button>
+            </Link>
+            
           </a>
           
         </div>
