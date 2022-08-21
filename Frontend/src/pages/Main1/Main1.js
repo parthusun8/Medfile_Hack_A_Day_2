@@ -4,14 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
-
 const baseURL = "https://mlh2022-medfile.herokuapp.com/";
 
-
 function Main1() {
-
-
-  async function getAndSetUserDetails(userId){
+  async function getAndSetUserDetails(userId) {
     axios
       .post(baseURL + "users/getuser", {
         docId: userId,
@@ -21,42 +17,40 @@ function Main1() {
         console.log(data);
 
         updateName(data.firstName, data.middleName, data.lastName);
-        if(data.age!=undefined){
-          setAge(data.age);
+        if (data.currentAge != undefined) {
+          setAge(data.currentAge);
         }
-        if(data.gender!=undefined){
+        if (data.gender != undefined) {
           setGender(data.gender);
         }
-        if(data.height!=undefined){
+        if (data.height != undefined) {
           setHeight(data.height);
         }
-        if(data.weight!=undefined){
+        if (data.weight != undefined) {
           setWeight(data.weight);
         }
-        if(data.address!=undefined){
+        if (data.address != undefined) {
           setAddress(data.address);
         }
-        if(data.disability!=undefined){
+        if (data.disability != undefined) {
           setDisability(data.disability);
         }
-        if(data.allergies!=undefined){
+        if (data.allergies != undefined) {
           setAllergies(data.allergies);
         }
-        if(data.medications!=undefined){
+        if (data.medications != undefined) {
           setMedications(data.medications);
         }
-
       })
       .catch((e) => {
         console.log(e?.response?.data);
       });
   }
 
-  function updateName(fn, mn, ln){
-    if(mn!=""){
+  function updateName(fn, mn, ln) {
+    if (mn != "") {
       setName(fn + " " + mn + " " + ln);
-    }
-    else{
+    } else {
       setName(fn + " " + ln);
     }
   }
@@ -64,19 +58,17 @@ function Main1() {
   const navigate = useNavigate();
   useEffect(() => {
     const a = localStorage.getItem("userId");
-    if(a){
+    if (a) {
       getAndSetUserDetails(a);
-    }
-    else{
+    } else {
       navigate("/login");
     }
-  },[]);
+  }, []);
 
-  function emptyLocalStorage(){
+  function emptyLocalStorage() {
     localStorage.clear();
     navigate("/login");
   }
-
 
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
@@ -98,7 +90,7 @@ function Main1() {
 
   function send() {
     const params = {
-      userId : localStorage.getItem("userId"),
+      userId: localStorage.getItem("userId"),
       currentAge: age,
       sex: gender,
       height: height,
@@ -123,7 +115,9 @@ function Main1() {
   }
   return (
     <>
-      <button className="Navbarbtn" onClick={emptyLocalStorage}>Logout</button>
+      <button className="Navbarbtn" onClick={emptyLocalStorage}>
+        Logout
+      </button>
 
       <div className="middleCon main1">
         <div style={{ height: "100px" }}></div>
@@ -163,7 +157,7 @@ function Main1() {
                   id="name-input"
                   placeholder="Enter your full name"
                   onChange={(e) => setName(e.target.value)}
-                  value = {name}
+                  value={name}
                 />
                 {/* <h1>{name}</h1> */}
               </div>
@@ -176,14 +170,18 @@ function Main1() {
                   id="number-input"
                   placeholder="Enter your age (in years)"
                   onChange={(e) => setAge(e.target.value)}
-                  value = {age}
+                  value={age}
                 />
                 {/* <h1>{age}</h1> */}
               </div>
               {/* Gender */}
               <div className="gender-cont mt-1">
                 <span> Gender </span>
-                <select type="text" onChange={(e) => setGender(e.target.value)} value = {gender}>
+                <select
+                  type="text"
+                  onChange={(e) => setGender(e.target.value)}
+                  value={gender}
+                >
                   <option value="NA">Not Specified</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -201,7 +199,7 @@ function Main1() {
                   onChange={(e) => {
                     setHeight(e.target.value);
                   }}
-                  value = {height}
+                  value={height}
                 />
                 {/* <h1>{height}</h1> */}
               </div>
@@ -216,7 +214,7 @@ function Main1() {
                   onChange={(e) => {
                     setWeight(e.target.value);
                   }}
-                  value = {weight}
+                  value={weight}
                 />
                 {/* <h1>{weight}</h1> */}
               </div>
@@ -231,7 +229,7 @@ function Main1() {
                   onChange={(e) => {
                     setAddress(e.target.value);
                   }}
-                  value = {address}
+                  value={address}
                 />
                 {/* <h1>{address}</h1> */}
               </div>
@@ -246,7 +244,7 @@ function Main1() {
                   onChange={(e) => {
                     setDisability(e.target.value);
                   }}
-                  value = {disability}
+                  value={disability}
                 />
                 {/* <h1>{disability}</h1> */}
               </div>
@@ -259,7 +257,7 @@ function Main1() {
                   id="Allergies-input"
                   placeholder="Enter your allergies (if, any)"
                   onChange={(e) => setAllergies(e.target.value)}
-                  value = {allergies}
+                  value={allergies}
                 />
                 {/* <h1>{allergies}</h1> */}
               </div>
@@ -272,7 +270,7 @@ function Main1() {
                   id="Medications-input"
                   placeholder="Enter your ongoing medications (if, any)"
                   onChange={(e) => setMedications(e.target.value)}
-                  value = {medications}
+                  value={medications}
                 />
                 {/* <h1>{medi}</h1> */}
               </div>
@@ -285,7 +283,7 @@ function Main1() {
                   id="Operations-input"
                   placeholder="Enter the previous operations Done (if, any)"
                   onChange={(e) => setOperation(e.target.value)}
-                  value = {operation}
+                  value={operation}
                 />
                 {/* <h1>{operation}</h1> */}
               </div>
@@ -317,12 +315,9 @@ function Main1() {
                   policy of MedFile.
                 </label>
               </div>
-              <button className="mt-5 pt-3 pb-3 px-5 py-5" onClick={send}>
-                Save Changes
-              </button>
-              <Link to="/qr" >
+              <Link to="/user">
                 <button className="mt-5 pt-3 pb-3 px-5 py-5" onClick={send}>
-                  Generate QR
+                  Save Changes
                 </button>
               </Link>
             </form>

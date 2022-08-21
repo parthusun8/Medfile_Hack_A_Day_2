@@ -13,6 +13,14 @@ const baseURL = "https://mlh2022-medfile.herokuapp.com/";
 
 function Login() {
 
+  const navigate = useNavigate();
+  useEffect(() => {
+    const a = localStorage.getItem("userId");
+    if(a){
+      navigate("/user")
+    }
+  },[]);
+
   function updateLocalStorage(params){
     localStorage.setItem("userId", params.userId);
     localStorage.setItem("Email", params.email);
@@ -32,7 +40,7 @@ function Login() {
     //console.log(password);
   }
   
-  const navigate = useNavigate();
+  
   async function send() {
     console.log(email, password);
     axios
