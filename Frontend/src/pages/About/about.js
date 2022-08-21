@@ -26,7 +26,11 @@ function About() {
                 Signup
               </button>
             </Link>
-            
+            <Link to="/">
+              <button className="Navbarbtn1 hover-border">
+                Logout
+              </button>
+            </Link>
           </a>
           
         </div>
