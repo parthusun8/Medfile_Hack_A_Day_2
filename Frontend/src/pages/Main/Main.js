@@ -1,18 +1,19 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Main.css";
 const Main = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
-  const [gender, setGender] = useState("");
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const [address, setAddress] = useState("");
-  const [disability, setDisability] = useState("");
-  const [allergies, setAllergies] = useState("");
-  const [medications, setMedications] = useState("");
-  const [operation, setOperation] = useState("");
-  const [submit, setSubmit] = useState(false);
-  const [upload, setUpload] = useState("");
+  // const [name, setName] = useState("");
+  // const [age, setAge] = useState(0);
+  // const [gender, setGender] = useState("");
+  // const [height, setHeight] = useState(0);
+  // const [weight, setWeight] = useState(0);
+  // const [address, setAddress] = useState("");
+  // const [disability, setDisability] = useState("");
+  // const [allergies, setAllergies] = useState("");
+  // const [medications, setMedications] = useState("");
+  // const [operation, setOperation] = useState("");
+  // const [submit, setSubmit] = useState(false);
+  // const [upload, setUpload] = useState("");
 
     // Commented send function as there is nothing to send.
     // function send() {
@@ -39,7 +40,7 @@ const Main = () => {
   return (
     <div className="middleCon main1">
       <div style={{ height: "100px"}}></div>
-      <a><button>Update Details</button></a>
+      {/* <button style={{float: "left"}}>Update Details</button> */}
       <center><div className="pt-5 contact-container updateForm" style={{ width: "60%", border: "1px solid black", borderRadius: "30px"}}>
         <form className="form-for-signup m-3" onSubmit={(e) => e.preventDefault()}>
           {/* <table>
@@ -72,10 +73,6 @@ const Main = () => {
                 <td style={{width: "60%"}} id="saved-gender">Male</td>
             </tr>
             <tr>
-                <td className="p-5">Age</td>
-                <td style={{width: "60%"}} id="saved-age">25</td>
-            </tr>
-            <tr>
                 <td className="p-5">Height (cm)</td>
                 <td style={{width: "60%"}} id="saved-height">152</td>
             </tr>
@@ -106,6 +103,11 @@ const Main = () => {
           </table></center>
           {/* jspdf library can be used */}
           {/* <button className="mt-5 pt-3 pb-3 px-5 py-5" >Save as Pdf</button> */}
+          <Link to="/user/update">
+              <button className="Navbarbtn1">
+                Add/Update Details
+              </button>
+            </Link>
         </form>
       </div></center>
       <div style={{ height: "100px"}}></div>

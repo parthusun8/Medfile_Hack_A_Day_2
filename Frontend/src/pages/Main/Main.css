@@ -33,3 +33,7 @@ td{
     border: 1px solid black;
     text-align: center;
 }
+
+.link:hover{
+    color: black !important;
+}
