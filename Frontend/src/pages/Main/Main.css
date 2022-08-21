@@ -6,7 +6,6 @@
 
 .updateForm{
     background-color: rgba(255,255,255,0.5);
-    
 }
 
 .middler{
@@ -30,7 +29,7 @@
 }
 
 td{
-    width: 200px;
+    width: 20%;
     border: 1px solid black;
     text-align: center;
 }

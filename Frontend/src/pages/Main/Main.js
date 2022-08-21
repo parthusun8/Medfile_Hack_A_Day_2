@@ -44,12 +44,12 @@ const Main = () => {
         <form className="form-for-signup m-3" onSubmit={(e) => e.preventDefault()}>
           {/* <table>
             <tr>
-                <td>Hey</td>
-                <td>Hey1</td>
+                <td className="p-5">Hey</td>
+                <td className="p-5">Hey1</td>
             </tr>
             <tr>
-                <td>123</td>
-                <td>1234</td>
+                <td className="p-5">123</td>
+                <td className="p-5">1234</td>
             </tr>
           </table> */}
           <h1>Patient Details</h1>
@@ -57,106 +57,53 @@ const Main = () => {
             <div className="rounded-photo"></div>
           </div>
 
-          <table>
+          <center>
+          <table className="mt-5 mb-5" style={{borderRadius: "20px"}}>
             <tr>
-                <td>Name</td>
-                <td id="saved-name">Anonymous</td>
+                <td className="p-5">Name</td>
+                <td style={{width: "60%"}} id="saved-name">Anonymous</td>
             </tr>
             <tr>
-                <td>Age</td>
-                <td id="saved-age">25</td>
+                <td className="p-5">Age</td>
+                <td style={{width: "60%"}} id="saved-age">25</td>
             </tr>
             <tr>
-                <td>Gender</td>
-                <td id="saved-gender">Male</td>
+                <td className="p-5">Gender</td>
+                <td style={{width: "60%"}} id="saved-gender">Male</td>
             </tr>
             <tr>
-                <td>Age</td>
-                <td id="saved-age">25</td>
+                <td className="p-5">Age</td>
+                <td style={{width: "60%"}} id="saved-age">25</td>
             </tr>
             <tr>
-                <td>Height</td>
-                <td id="saved-age">25</td>
+                <td className="p-5">Height (cm)</td>
+                <td style={{width: "60%"}} id="saved-height">152</td>
             </tr>
-          </table>
-          {/* Weight */}
-          <div className="weight-cont mt-1">
-            <span> Weight </span>
-            <input
-              type="number"
-              name="Weight"
-              id="Weight-input"
-              placeholder="Enter your weight (in Kilograms)"
-              onChange={(e) => {
-                setWeight(e.target.value);
-              }}
-            />
-            {/* <h1>{weight}</h1> */}
-          </div>
-          {/*Address*/}
-          <div className="Address mt-1">
-            <span> Address </span>
-            <input
-              type="text"
-              name="Address"
-              id="Address-input"
-              placeholder="Enter your full address with postal code"
-              onChange={(e) => {
-                setAddress(e.target.value);
-              }}
-            />
-            {/* <h1>{address}</h1> */}
-          </div>
-          {/*Major disabilities*/}
-          <div className="Disability mt-1">
-            <span> Disabilities </span>
-            <input
-              type="text"
-              name="disability"
-              id="Disability-input"
-              placeholder="Enter your disabilities (if, any)"
-              onChange={(e) => {
-                setDisability(e.target.value);
-              }}
-            />
-            {/* <h1>{disability}</h1> */}
-          </div>
-          {/*Allergies */}
-          <div className="Allergies mt-1">
-            <span> Allergies </span>
-            <input
-              type="text"
-              name="allergies"
-              id="Allergies-input"
-              placeholder="Enter your allergies (if, any)"
-              onChange={(e) => setAllergies(e.target.value)}
-            />
-            {/* <h1>{allergies}</h1> */}
-          </div>
-          {/* Ongoing medications */}
-          <div className="Medications mt-1">
-            <span> Medications </span>
-            <input
-              type="text"
-              name="Medications"
-              id="Medications-input"
-              placeholder="Enter your ongoing medications (if, any)"
-              onChange={(e) => setMedications(e.target.value)}
-            />
-            {/* <h1>{medi}</h1> */}
-          </div>
-          {/* Operations */}
-          <div className="Operations mt-1">
-            <span> Previous Operations Done </span>
-            <input
-              type="text"
-              name="Operations"
-              id="Operations-input"
-              placeholder="Enter the previous operations Done (if, any)"
-              onChange={(e) => setOperation(e.target.value)}
-            />
-            {/* <h1>{operation}</h1> */}
-          </div>
+            <tr>
+                <td className="p-5">Weight (kg)</td>
+                <td style={{width: "60%"}} id="saved-weight">75</td>
+            </tr>
+            <tr>
+                <td className="p-5">Address</td>
+                <td style={{width: "60%"}} className="p-5" id="saved-address">Chennai - 600059, Tamil nadu, India</td>
+            </tr>
+            <tr>
+                <td className="p-5">Disabilities</td>
+                <td style={{width: "60%"}} id="saved-disabilities">Nil</td>
+            </tr>
+            <tr>
+                <td className="p-5">Allergies</td>
+                <td style={{width: "60%"}} id="saved-allergies">Nil</td>
+            </tr>
+            <tr>
+                <td className="p-5">Ongoing medications/ailments</td>
+                <td style={{width: "60%"}} className="p-5" id="saved-medications">Nil</td>
+            </tr>
+            <tr>
+                <td className="p-5">Previous operations done</td>
+                <td style={{width: "60%"}} className="p-5" id="saved-operations">Nil</td>
+            </tr>
+          </table></center>
           {/* jspdf library can be used */}
           {/* <button className="mt-5 pt-3 pb-3 px-5 py-5" >Save as Pdf</button> */}
         </form>
