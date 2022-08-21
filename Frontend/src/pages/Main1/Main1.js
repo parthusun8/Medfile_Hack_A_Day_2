@@ -54,6 +54,7 @@ const Main1 = () => {
           <div className="name-cont mt-3">
             <span> Name </span>
             <input
+              required
               type="text"
               name="name"
               id="name-input"
@@ -66,6 +67,7 @@ const Main1 = () => {
           <div className="age-cont mt-1">
             <span> Age </span>
             <input
+              required
               type="number"
               name="age"
               id="number-input"
@@ -88,6 +90,7 @@ const Main1 = () => {
           <div className="height-cont mt-1">
             <span> Height </span>
             <input
+              required
               type="number"
               name="Height"
               id="Height-input"
@@ -102,6 +105,7 @@ const Main1 = () => {
           <div className="weight-cont mt-1">
             <span> Weight </span>
             <input
+              required
               type="number"
               name="Weight"
               id="Weight-input"
@@ -116,6 +120,7 @@ const Main1 = () => {
           <div className="Address mt-1">
             <span> Address </span>
             <input
+              required
               type="text"
               name="Address"
               id="Address-input"
@@ -130,6 +135,7 @@ const Main1 = () => {
           <div className="Disability mt-1">
             <span> Disabilities </span>
             <input
+              required
               type="text"
               name="disability"
               id="Disability-input"
