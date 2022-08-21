@@ -16,8 +16,8 @@ function About() {
             </h1>
           </a>
           <a className="justify-content-end" >
-            <button ><a href="/login" className="Navbarbtn" >Login</a></button>
-            <button><a href="/signup" className="Navbarbtn">Signup</a></button>
+            <a href="/login" className="Navbarbtn1" style={{ color: "white" }} ><button className="navbtn1"> Login </button></a>
+            <a href="/signup" className="Navbarbtn2" style={{ color: "white" }}><button className="navbtn2"> Signup </button></a>
           </a>
           
         </div>
@@ -39,7 +39,7 @@ function About() {
           <h2>
             Welcome to <span>MedFile</span>
           </h2>
-          <h3>MediFile is an application which helps to fill you application form without going to hospital and convert that application form into QR which can be stored in our health records.</h3>
+          <h3>MedFile is an application which helps to fill you application form without going to hospital and convert that application form into QR which can be stored in our health records.</h3>
           <h4>No longer wait for the healthcare provider to print, scan and fax your application to their office - just take the QR code with you.</h4> 
 
         </div>
