@@ -4,50 +4,49 @@ import { useEffect } from "react";
 import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {AiFillEye} from "react-icons/ai";
+import axios from "axios";
+
+
+const baseURL = "http://04cb-103-4-222-252.ngrok.io/";
+
 function Signup() {
-  let navigate = useNavigate();
-  function showImg() {
-    setShowImage(!showImage);
+
+
+  function updateLocalStorage(params){
+    localStorage.setItem("userId", params.userId);
+    localStorage.setItem("Email", params.email);
+    localStorage.setItem("Name", params.name);
   }
-  const [showImage, setShowImage] = useState(false);
+  
   const [show,setShow] =useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("M");
-  const [location, setLocation] = useState("");
-  const [aadhar, setAadhar] = useState("");
-  const [pan, setPan] = useState("");
-  const [govtBody, setgovtBody] = useState("");
-  const [confirmPassword,setConfirmPassword]=useState("");
-  function selectNum() {
-    var strUser = document.getElementById("gender-select").value;
-    setGender(strUser);
-  }
 
-  function send() {
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        fullName: name,
-        loginEmail: email,
-        loginPass: password,
-      }),
-    };
-    fetch("http://c3ea-103-4-222-252.ngrok.io/users/signup", requestOptions).then(
-      (response) => {
-        const resp = response.json();
-        console.log(resp);
-        navigate("/");
-      }
-    );
-    // axios
-    //   .post("http://192.168.195.84:8000/api/users/signup", requestOptions)
-    //   .then((response) => console.log(response.data))
-    //   .then(navigate("/"));
+
+  const navigate = useNavigate();
+  async function send() {
+    console.log(email, password);
+    axios
+        .post(
+          baseURL + "users/signup", 
+          {
+            name: name,
+            loginEmail: email,
+            loginPass: password,
+          }
+        )
+        .then((response) => {
+          console.log("Signed Up", response?.data);
+          updateLocalStorage({
+            userId : response.data,
+            email : email,
+            name : name,
+          });
+          navigate("/user");
+        }).catch(e => {
+          console.log(e?.response?.data);
+        });;
   }
   const TogglePasswordVisibility=()=>{
     setShow(show?false:true);
@@ -68,16 +67,6 @@ function Signup() {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          {/* <div className="phone">
-              <span>Phone Number</span>
-              <input
-                type="phone"
-                name="phone"
-                id="phone-input"
-                autoComplete="off"
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div> */}
             <div className="org">
             <span className="mx-3"> Email </span>
             <input
@@ -101,17 +90,13 @@ function Signup() {
             />
             <i onClick={TogglePasswordVisibility} className="show--password mx-3"><AiFillEye/> <span className="show--password">Show password</span></i>
           </div>
-          {/* <div className="pass-cont">
-            <span>Confirm Password</span>
-            <input
-                type={show?"text":"password"}
-                name="pass"
-                id="pass-input"
-                autoComplete="off"
-                onChange={(e)=>setConfirmPassword(e.target.value)}/>
-            <i onClick={TogglePasswordVisibility}><AiFillEye/> Show password</i>
-          </div> */}
-          <div className="mx-3 commentout mt-3"><i>Already have an account? <a href="./login">Login</a></i></div>
+
+          <div className="mx-3 commentout mt-3">
+            <i>
+              Existing User? <Link to="/login">Sign In Here</Link>
+            </i>
+          </div>
+          
           <button onClick={send} className="sign-btn mt-5">
             SignUp
           </button>

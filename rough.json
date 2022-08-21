@@ -1,0 +1,87 @@
+{
+    fullName: 'BHJNK',
+    loginEmail: 'server123@test.com',
+    loginPass: '123678'
+  }
+  UserCredentialImpl {
+    user: <ref *1> UserImpl {
+      providerId: 'firebase',
+      proactiveRefresh: ProactiveRefresh {
+        user: [Circular *1],
+        isRunning: false,
+        timerId: null,
+        errorBackoff: 30000
+      },
+      reloadUserInfo: {
+        localId: '9lXQzm6Xr2TGO7uQnlEKhc8IO0m2',
+        email: 'server123@test.com',
+        passwordHash: 'UkVEQUNURUQ=',
+        emailVerified: false,
+        passwordUpdatedAt: 1661047393704,
+        providerUserInfo: [Array],
+        validSince: '1661047393',
+        lastLoginAt: '1661047393704',
+        createdAt: '1661047393704',
+        lastRefreshAt: '2022-08-21T02:03:13.704Z'
+      },
+      reloadListener: null,
+      uid: '9lXQzm6Xr2TGO7uQnlEKhc8IO0m2',
+      auth: AuthImpl {
+        app: [FirebaseAppImpl],
+        heartbeatServiceProvider: [Provider],
+        config: [Object],
+        currentUser: [Circular *1],
+        emulatorConfig: null,
+        operations: [Promise],
+        authStateSubscription: [Subscription],
+        idTokenSubscription: [Subscription],
+        beforeStateQueue: [AuthMiddlewareQueue],
+        redirectUser: null,
+        isProactiveRefreshEnabled: false,
+        _canInitEmulator: false,
+        _isInitialized: true,
+        _deleted: false,
+        _initializationPromise: [Promise],
+        _popupRedirectResolver: null,
+        _errorFactory: [ErrorFactory],
+        lastNotifiedUid: '9lXQzm6Xr2TGO7uQnlEKhc8IO0m2',
+        languageCode: 'it',
+        tenantId: null,
+        settings: [Object],
+        frameworks: [],
+        name: '[DEFAULT]',
+        clientVersion: 'Node/JsCore/9.9.3/FirebaseCore-web',
+        persistenceManager: [PersistenceUserManager]
+      },
+      stsTokenManager: StsTokenManager {
+        refreshToken: 'AOEOulZCPEE-Z4WGxRMRnPbxwdBmcu-b1KXc5_1t010ks5jtNJ2H-W6MD2fQR-VvklWH222zbyx44I8yCueoSLiyP2aHtWi4eHk1-9zY03YjdyxtKd6pVk4_kSoSc6juuULjP6mLODgmmoRrm55IUzCAzZgsbX4FidL-feUg_Fxu3LVYXV9PBijiF7r-0iVgTaEzi9U4jc8O',
+        accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImE4YmZhNzU2NDk4ZmRjNTZlNmVmODQ4YWY5NTI5ZThiZWZkZDM3NDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWxoLTIwMjIiLCJhdWQiOiJtbGgtMjAyMiIsImF1dGhfdGltZSI6MTY2MTA0NzM5NCwidXNlcl9pZCI6IjlsWFF6bTZYcjJUR083dVFubEVLaGM4SU8wbTIiLCJzdWIiOiI5bFhRem02WHIyVEdPN3VRbmxFS2hjOElPMG0yIiwiaWF0IjoxNjYxMDQ3Mzk0LCJleHAiOjE2NjEwNTA5OTQsImVtYWlsIjoic2VydmVyMTIzQHRlc3QuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInNlcnZlcjEyM0B0ZXN0LmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.lERN5cpjrv5eme34cc740fF8H9uoSZleiIJWIvXULS_d7xG_h2AqBU4LiDmHtOljIduXo6iQiFFXGH3mpZWVHnKViYn2Hm1hOJzny_H80gz-rMEVfbAL7OwZEldWasQVbb5DKDykYh4DuxDN6piphV2eoDzPkLpL29bnavKKQn5hjEp2KEVfVsY3R3V0rvRntNboC_3J2QGlc0KmUOMohPH4WxXwVbYy9F5-s0gRp9043J5ANTyQf0xfOUZnqm-uUx6_hYDLe7LvDFUE7uazwOLijQHE2fiLhbDKyzHSe1I0hcIlO3_ULMn8_a2yA6nuNSZC6hONTujNcITmdBkAfg',
+        expirationTime: 1661050983548
+      },
+      accessToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImE4YmZhNzU2NDk4ZmRjNTZlNmVmODQ4YWY5NTI5ZThiZWZkZDM3NDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWxoLTIwMjIiLCJhdWQiOiJtbGgtMjAyMiIsImF1dGhfdGltZSI6MTY2MTA0NzM5NCwidXNlcl9pZCI6IjlsWFF6bTZYcjJUR083dVFubEVLaGM4SU8wbTIiLCJzdWIiOiI5bFhRem02WHIyVEdPN3VRbmxFS2hjOElPMG0yIiwiaWF0IjoxNjYxMDQ3Mzk0LCJleHAiOjE2NjEwNTA5OTQsImVtYWlsIjoic2VydmVyMTIzQHRlc3QuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInNlcnZlcjEyM0B0ZXN0LmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.lERN5cpjrv5eme34cc740fF8H9uoSZleiIJWIvXULS_d7xG_h2AqBU4LiDmHtOljIduXo6iQiFFXGH3mpZWVHnKViYn2Hm1hOJzny_H80gz-rMEVfbAL7OwZEldWasQVbb5DKDykYh4DuxDN6piphV2eoDzPkLpL29bnavKKQn5hjEp2KEVfVsY3R3V0rvRntNboC_3J2QGlc0KmUOMohPH4WxXwVbYy9F5-s0gRp9043J5ANTyQf0xfOUZnqm-uUx6_hYDLe7LvDFUE7uazwOLijQHE2fiLhbDKyzHSe1I0hcIlO3_ULMn8_a2yA6nuNSZC6hONTujNcITmdBkAfg',
+      displayName: null,
+      email: 'server123@test.com',
+      emailVerified: false,
+      phoneNumber: null,
+      photoURL: null,
+      isAnonymous: false,
+      tenantId: null,
+      providerData: [ [Object] ],
+      metadata: UserMetadata {
+        createdAt: '1661047393704',
+        lastLoginAt: '1661047393704',
+        lastSignInTime: 'Sun, 21 Aug 2022 02:03:13 GMT',
+        creationTime: 'Sun, 21 Aug 2022 02:03:13 GMT'
+      }
+    },
+    providerId: null,
+    _tokenResponse: {
+      kind: 'identitytoolkit#SignupNewUserResponse',
+      idToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImE4YmZhNzU2NDk4ZmRjNTZlNmVmODQ4YWY5NTI5ZThiZWZkZDM3NDUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vbWxoLTIwMjIiLCJhdWQiOiJtbGgtMjAyMiIsImF1dGhfdGltZSI6MTY2MTA0NzM5NCwidXNlcl9pZCI6IjlsWFF6bTZYcjJUR083dVFubEVLaGM4SU8wbTIiLCJzdWIiOiI5bFhRem02WHIyVEdPN3VRbmxFS2hjOElPMG0yIiwiaWF0IjoxNjYxMDQ3Mzk0LCJleHAiOjE2NjEwNTA5OTQsImVtYWlsIjoic2VydmVyMTIzQHRlc3QuY29tIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbInNlcnZlcjEyM0B0ZXN0LmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.lERN5cpjrv5eme34cc740fF8H9uoSZleiIJWIvXULS_d7xG_h2AqBU4LiDmHtOljIduXo6iQiFFXGH3mpZWVHnKViYn2Hm1hOJzny_H80gz-rMEVfbAL7OwZEldWasQVbb5DKDykYh4DuxDN6piphV2eoDzPkLpL29bnavKKQn5hjEp2KEVfVsY3R3V0rvRntNboC_3J2QGlc0KmUOMohPH4WxXwVbYy9F5-s0gRp9043J5ANTyQf0xfOUZnqm-uUx6_hYDLe7LvDFUE7uazwOLijQHE2fiLhbDKyzHSe1I0hcIlO3_ULMn8_a2yA6nuNSZC6hONTujNcITmdBkAfg',
+      email: 'server123@test.com',
+      refreshToken: 'AOEOulZCPEE-Z4WGxRMRnPbxwdBmcu-b1KXc5_1t010ks5jtNJ2H-W6MD2fQR-VvklWH222zbyx44I8yCueoSLiyP2aHtWi4eHk1-9zY03YjdyxtKd6pVk4_kSoSc6juuULjP6mLODgmmoRrm55IUzCAzZgsbX4FidL-feUg_Fxu3LVYXV9PBijiF7r-0iVgTaEzi9U4jc8O',
+      expiresIn: '3600',
+      localId: '9lXQzm6Xr2TGO7uQnlEKhc8IO0m2'
+    },
+    operationType: 'signIn'
+  }

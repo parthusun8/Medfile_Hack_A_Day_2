@@ -37,9 +37,9 @@ const user_login = async (req, res) => {
     console.log(uid);
     res.send(uid);
   } catch (err) {
-    console.error(err.code.split("/")[1]);
+    console.error(err.code?.split("/")[1]);
 
-    res.status(500).send(err.code.split("/")[1]);
+    res.status(500).send(err.code?.split("/")[1]);
   }
 };
 
@@ -53,7 +53,7 @@ const user_register = async (req, res) => {
       userData.loginEmail,
       userData.loginPass
     );
-
+    // console.log(userCredentials.user[operationType]);
     const uid = userCredentials.user.uid;
     let fullName = userData.name;
     fullName = fullName.split(" ");
@@ -74,8 +74,8 @@ const user_register = async (req, res) => {
     //updatingID
     res.status(200).send(uid);
   } catch (err) {
-    console.log(err.code.split("/")[1]);
-    res.status(500).send(err.code.split("/")[1]);
+    console.log(err.code?.split("/")[1]);
+    res.status(500).send(err.code?.split("/")[1]);
   }
 };
 
@@ -137,6 +137,19 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+// /api/users/updateuser
+const updateUser = async (req, res) => {
+  try{
+    const documentRef = doc(db, 'users', req.body.userId);
+    delete req.body.userId;
+    console.log(req.body);
+    await updateDoc(documentRef, req.body);
+    res.status(200).send("Updated Successfully");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server error");
+  }
+}
 
 module.exports = {
   user_register,
@@ -145,4 +158,5 @@ module.exports = {
   monitor_AuthState,
   getAllUsers,
   getUserDetails,
+  updateUser,
 };

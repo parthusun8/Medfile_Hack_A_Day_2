@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+// import { Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import {AiFillEye} from "react-icons/ai";
 
+import axios from "axios";
+
+const baseURL = "http://04cb-103-4-222-252.ngrok.io/";
+
+// useEffect()
+
 function Login() {
+
+  function updateLocalStorage(params){
+    localStorage.setItem("userId", params.userId);
+    localStorage.setItem("Email", params.email);
+  }
 
   const [show,setShow] = useState(false);
   const [email, setEmail] = useState("");
@@ -12,36 +24,37 @@ function Login() {
   const TogglePasswordVisibility=()=>{
     setShow(!show);
   };
-
   function updateEmail(data) {
     setEmail(data);
   }
   function updatePassword(data) {
     setPass(data);
-    console.log(password);
+    //console.log(password);
   }
   
-  // const navigate = Navigate;
-  // async function send() {
-  //   // alert("hi");
-  //   const requestOptions = {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       loginEmail: email,
-  //       loginPass: password,
-  //     }),
-  //   };
-  //   alert(email);
-  //   alert(password);
-  //   fetch("http://c3ea-103-4-222-252.ngrok.io/users/login", requestOptions).then(
-  //     (response) => {
-  //       const resp = response.json();
-  //       alert(resp);
-  //       // navigate("/");
-  //     }
-  //   );
-  // }
+  const navigate = useNavigate();
+  async function send() {
+    console.log(email, password);
+    axios
+        .post(
+          baseURL + "users/login", 
+          {
+            loginEmail: email,
+            loginPass: password,
+          }
+        )
+        .then((response) => {
+          console.log("Logged In", response.data);
+          updateLocalStorage({
+            userId : response.data,
+            email : email
+          });
+          navigate("/user");
+        })
+        .catch(e => {
+          console.log(e.response.data);
+        });
+  }
   return (
     <div className="middle-login-con">
       
@@ -53,7 +66,7 @@ function Login() {
             <span className="mx-3">Email Id</span>
             <input
               onChange={(e) => updateEmail(e.target.value)}
-              type="text"
+              type="email"
               name="name"
               id="name-input"
               placeholder="Enter your email"
@@ -70,12 +83,19 @@ function Login() {
               placeholder="Enter your password"
               className="mx-3"
             />
-            <i onClick={TogglePasswordVisibility} className="mx-3"><AiFillEye/> Show password</i>
+            <i onClick={TogglePasswordVisibility} className="mx-3 shw-pwd"><AiFillEye/> Show password</i>
           </div>
-          {/* <button onClick={send} className="sign-in-btn"> */}
-          <div className="mx-3 commentout mt-3"><i>New to MedFile? <a href="./signup">Create an account</a></i></div>
+          
+          
+
+          <div className="mx-3 commentout mt-3">
+            <i>
+              New to MediFile? <Link to="/signup">Create an account</Link>
+            </i>
+          </div>
+
           <center>
-          <button className="mt-4 mb-3 sign-in-btn">
+          <button className="mt-4 mb-3 sign-in-btn" onClick={send}>
             Login
           </button>
           </center>

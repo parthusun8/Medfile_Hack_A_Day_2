@@ -15,8 +15,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", require("./Routes/userRoutes"));
-app.get("/:username", (req, res) => {
-  res.send(`Hey ${req.params.username}`);
-});
+// app.get("/:username", (req, res) => {
+//   res.send(`Hey ${req.params.username}`);
+// });
 app.listen(port);
 

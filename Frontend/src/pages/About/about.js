@@ -16,8 +16,17 @@ function About() {
             </h1>
           </a>
           <a className="justify-content-end" >
-            <a href="/login" className="Navbarbtn1" style={{ color: "white" }} ><button className="navbtn1"> Login </button></a>
-            <a href="/signup" className="Navbarbtn2" style={{ color: "white" }}><button className="navbtn2"> Signup </button></a>
+            <Link to="/login">
+              <button className="Navbarbtn">
+                Login
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button className="Navbarbtn">
+                Signup
+              </button>
+            </Link>
+            
           </a>
           
         </div>
