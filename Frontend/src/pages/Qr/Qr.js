@@ -4,7 +4,7 @@ import "./Qr.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const baseURL = "http://04cb-103-4-222-252.ngrok.io/";
+const baseURL = "https://mlh2022-medfile.herokuapp.com/";
 
 function Qr() {
   const [name, setName] = useState("");
