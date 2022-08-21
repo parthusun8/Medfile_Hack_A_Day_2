@@ -12,6 +12,7 @@ body {
     color: black !important;
 }
 
-.navbtn1:hover, .navbtn2:hover{
+.hover-border:hover{
     border: 1px solid black;
 }
+

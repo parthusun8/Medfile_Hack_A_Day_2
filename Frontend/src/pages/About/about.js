@@ -17,12 +17,12 @@ function About() {
           </a>
           <a className="justify-content-end" >
             <Link to="/login">
-              <button className="Navbarbtn">
+              <button className="Navbarbtn1 hover-border">
                 Login
               </button>
             </Link>
             <Link to="/signup">
-              <button className="Navbarbtn">
+              <button className="Navbarbtn1 hover-border">
                 Signup
               </button>
             </Link>
