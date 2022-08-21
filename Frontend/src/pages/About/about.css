@@ -4,10 +4,14 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
-.sabka-colour { 
-    color: #51A3BD !important;
-
-}
 .Navbarbtn{
     color: white !important;
+}
+
+.Navbarbtn1:hover, .Navbarbtn2:hover{
+    color: black !important;
+}
+
+.navbtn1:hover, .navbtn2:hover{
+    border: 1px solid black;
 }

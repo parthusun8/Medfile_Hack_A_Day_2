@@ -57,19 +57,21 @@ function Signup() {
         <form className="form-for-signup" onSubmit={(e) => e.preventDefault()}>
           <div className="name-cont mt-5">
             <div className="CreateAccount mx-3"><span className="welcome">Welcome</span><br /> to <span style={{ color: "red" }}>Med</span>File</div>
-            <span className="mx-3 mt-5">Full Name</span>
+            <span className="mx-3 mt-5"> Name </span>
             <input
               type="text"
               name="name"
+              placeholder="Enter your full name"
               id="name-input"
               autoComplete="off"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
             <div className="org">
-            <span className="mx-3">Email</span>
+            <span className="mx-3"> Email </span>
             <input
               type="text"
+              placeholder="Enter your email"
               name="org-name"
               id="org-input"
               autoComplete="off"
@@ -77,10 +79,11 @@ function Signup() {
             />
           </div>
           <div className="pass-cont">
-            <span className="mx-3">Password</span>
+            <span className="mx-3"> Password </span>
             <input
               type={show?"text":"password"}
               name="pass"
+              placeholder="Set a strong password"
               id="pass-input"
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
