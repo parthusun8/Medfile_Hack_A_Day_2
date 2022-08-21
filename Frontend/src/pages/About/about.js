@@ -8,7 +8,7 @@ function About() {
       <header id="header" className="header fixed-top" data-scrollto-offset={0}>
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a
-            href="index.html"
+            href="/"
             className="logo d-flex  flex-grow"
           >
             <h1>
