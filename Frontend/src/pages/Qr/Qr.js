@@ -1,8 +1,9 @@
 import React from "react";
 import QRCode from "react-qr-code";
-
+import "./Qr.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+
 const baseURL = "http://04cb-103-4-222-252.ngrok.io/";
 
 function Qr() {
@@ -93,9 +94,17 @@ function Qr() {
 
   
   return (
-    <div>
-        {console.log(jsonData)}
-      <QRCode value={jsonData} />
+    <div className="middle-qr-con">
+        <div className="qr-container">
+            <div className="mt-5"/>
+            <h1 className="mx-3"><center>Your Qr is successfully</center><center>generated</center></h1>
+            <div className="mt-5"/>
+            <center> <QRCode value={jsonData} /> </center>
+            <div/>
+            <h2 className="mx-3 mt-5"><center>Don't share this code to </center><center>anyone</center></h2>
+        </div>
+          
+        
     </div>
   );
 }

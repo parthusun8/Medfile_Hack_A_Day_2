@@ -8,7 +8,7 @@ function About() {
       <header id="header" className="header fixed-top" data-scrollto-offset={0}>
         <div className="container-fluid d-flex align-items-center justify-content-between">
           <a
-            href="index.html"
+            href="/"
             className="logo d-flex  flex-grow"
           >
             <h1>
@@ -17,12 +17,12 @@ function About() {
           </a>
           <a className="justify-content-end" >
             <Link to="/login">
-              <button className="Navbarbtn">
+              <button className="Navbarbtn1 hover-border">
                 Login
               </button>
             </Link>
             <Link to="/signup">
-              <button className="Navbarbtn">
+              <button className="Navbarbtn1 hover-border">
                 Signup
               </button>
             </Link>
