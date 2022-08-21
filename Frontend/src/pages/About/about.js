@@ -11,7 +11,7 @@ function About() {
             href="/"
             className="logo d-flex  flex-grow"
           >
-            <h1>
+            <h1 style={{fontWeight: "700"}}>
               <span style={{color: "red"}}>Med</span>File
             </h1>
           </a>
@@ -41,19 +41,15 @@ function About() {
           data-aos="zoom-out"
         >
           <img
-            src="assets/img/hospital.jpeg"
+            src="assets/img/hospital.png"
             className=" mt-5 pt-3 img-fluid"
             style={{ width: "40%" }}
           />
-          <h2>
+          <h2 className="mt-4" style={{fontWeight: "700"}}>
             Welcome to <span style={{color: "red"}}>Med</span>File
           </h2>
-          <h3><strong><span style={{color: "red"}}>Med</span>File</strong> is an application which reduces the user's work of filling 
-          an application form when visiting a new hospital. The basic details needed to fill an application form are collected and 
-          converted into a QR which can be scanned at the hospitals.</h3>
-          <h4>Patients <strong>need not wait</strong> any longer for the healthcare provider to print, scan and store your application 
-          in their database - just show the QR code and they will get your basic details directly and can save it to their database, 
-          if required.</h4> 
+          <h3>On an average, more than <strong style={{color: "red"}}>15 minutes</strong> of time is wasted by patients waiting for filling an application form or registering for an operation.</h3>
+          <h4><i>There is never enough time to do everything but there is always enough time to do the most important things.</i></h4>
         </div>
       </section>
       <main id="main">
@@ -71,7 +67,7 @@ function About() {
               </div>
               <div className="col-lg-7">
                 <h3 className="pt-0 pt-lg-5">
-                  The purpose of the project is to eliminate the waiting time of patients for new applications in a hospital.
+                  The <strong>main purpose</strong> of the project is to eliminate the waiting time of patients for new applications in a hospital.
                 </h3>
                 <ul className="nav nav-pills mb-3">
                   <li>
@@ -92,20 +88,29 @@ function About() {
                 {/* Tab Content */}
                 <div className="tab-content">
                   <div className="tab-pane fade show active" id="tab1">
-                    <p className="fst-italic">
-                      About Us goes here.....
+                    <p style={{fontSize: "22px"}} className="fst-italic">
+                      <ul>
+                        <li><strong><span style={{color: "red"}}>Med</span>File</strong> is an application which reduces the user's work
+                         of filling an application form whenever visiting a new hospital.</li>
+                        <li>The basic user details that are needed to fill an application form are <strong>already collected</strong> and converted into a QR which can be scanned at the hospitals.</li>
+                        <li>Patients <strong>need not wait</strong> any longer for the healthcare provider to print, scan and store your application 
+                      in their database.</li>
+                      </ul>
                     </p>
                   </div>
                   {/* End of Tab 1 Content */}
                   <div className="tab-pane fade show" id="tab2">
                     <div className="d-flex align-items-center mt-4">
-                      <p>Both the hospitals as well as the patients are benefitted by this application.
+                      <p style={{fontSize: "22px"}}>Both the hospitals as well as the patients are benefitted a lot by this application.
                         <ul>
-                          <li>For <strong>Patients</strong>, this application proves to be very helpful as they need not waste their time
+                          <li>For <strong>Patients</strong>, this application proves to be handy and very helpful as they need not waste their time
                            waiting in the hospital lobby for their application form to be processed during emergency. Using our application, 
                            the patient's basic details are directly made available to the hospital through a QR code
                             and thus, the form processing time is saved and the doctors can proceed with the operations.</li>
-                            <li>For <strong>Hospitals</strong> too, this application proves to be very helpful.</li>
+
+                            <li>For <strong>Hospitals</strong> too, this application proves to be very helpful as they need not 
+                            accomodate more patients in the lobby. The patients can be treated at the earliest and at any given time,
+                            there will not be much crowd at the hospital.</li>
                         </ul>
                       </p>
                       </div>
