@@ -90,11 +90,11 @@ function About() {
                   <div className="tab-pane fade show active" id="tab1">
                     <p style={{fontSize: "22px"}} className="fst-italic">
                       <ul>
-                        <li><strong><span style={{color: "red"}}>Med</span>File</strong> is an application which reduces the user's work
-                         of filling an application form whenever visiting a new hospital.</li>
+                        <li><strong><span style={{color: "red"}}>Med</span>File</strong> is an application which reduces the patient's work
+                         of filling an application or registration form whenever visiting a new hospital.</li>
                         <li>The basic user details that are needed to fill an application form are <strong>already collected</strong> and converted into a QR which can be scanned at the hospitals.</li>
                         <li>Patients <strong>need not wait</strong> any longer for the healthcare provider to print, scan and store your application 
-                      in their database.</li>
+                      in their database and the patients can thus be treated at the earliest.</li>
                       </ul>
                     </p>
                   </div>
